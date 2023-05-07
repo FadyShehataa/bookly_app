@@ -11,7 +11,6 @@ class BestSellerListViewItem extends StatelessWidget {
       height: 125,
       child: Row(
         children: [
-          // image
           // space
           // column
           AspectRatio(
@@ -27,6 +26,7 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+          
         ],
       ),
     );
