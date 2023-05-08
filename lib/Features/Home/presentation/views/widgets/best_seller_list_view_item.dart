@@ -25,9 +25,8 @@ class BestSellerListViewItem extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.red,
                   image: const DecorationImage(
-                    // fit: BoxFit.fill,
+                    fit: BoxFit.fill,
                     image: NetworkImage(AssetsData.testImage),
                   ),
                 ),
