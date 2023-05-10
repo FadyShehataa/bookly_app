@@ -1,6 +1,6 @@
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/my_colors.dart';
+import '../../../../../core/utils/styles.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({super.key});
@@ -11,7 +11,7 @@ class BookRating extends StatelessWidget {
       children: [
         const Icon(
           Icons.star_rate_rounded,
-          color: myYellow,
+          color: MyColors.myYellow,
           size: 22,
         ),
         const SizedBox(width: 6.3),
@@ -23,7 +23,7 @@ class BookRating extends StatelessWidget {
         Text(
           '(2390)',
           style: Styles.textStyle14.copyWith(
-            color: myWhite.withOpacity(0.5),
+            color: MyColors.myWhite.withOpacity(0.5),
           ),
         ),
       ],

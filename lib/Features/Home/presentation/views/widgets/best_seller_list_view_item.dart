@@ -1,11 +1,11 @@
-import 'package:bookly_app/Features/Home/presentation/views/widgets/book_rating.dart';
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/app_router.dart';
-import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/assets_data.dart';
+import '../../../../../core/utils/my_colors.dart';
+import '../../../../../core/utils/styles.dart';
+import 'book_rating.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -13,7 +13,7 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: SizedBox(
@@ -52,7 +52,9 @@ class BestSellerListViewItem extends StatelessWidget {
                     'J.K. Rowling',
                     style: Styles.textStyle14.copyWith(
                       fontWeight: FontWeight.w500,
-                      color: myWhite.withOpacity(0.7),
+                      color: MyColors.myWhite.withOpacity(
+                        0.7,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 3),
