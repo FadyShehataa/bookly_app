@@ -3,6 +3,7 @@ import 'package:bookly_app/Features/Home/presentation/views/widgets/book_rating.
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'books_action.dart';
 import 'custom_book_image.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -39,6 +40,16 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           const BookRating(),
+          const SizedBox(height: 37),
+          const BooksAction(),
+          const SizedBox(height: 50),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
         ],
       ),
     );
