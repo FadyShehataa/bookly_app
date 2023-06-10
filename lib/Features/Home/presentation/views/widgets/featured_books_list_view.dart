@@ -28,12 +28,9 @@ class FeaturedBooksListView extends StatelessWidget {
               ),
             ),
           );
-        // return const ShimmerFeaturedBooks();
-
         } else if (state is FeaturedBooksFailure) {
           return CustomErrorWidget(errMessage: state.errMessage);
         }
-        // return const CustomLoadingIndicator();
         return const ShimmerFeaturedBooks();
       },
     );

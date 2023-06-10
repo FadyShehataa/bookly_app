@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/my_colors.dart';
 import 'package:bookly_app/core/widgets/shimmer_featured_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -8,8 +9,8 @@ class ShimmerFeaturedBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.grey[400]!,
-      highlightColor: Colors.grey[100]!,
+      baseColor: MyColors.myDarkGrey,
+      highlightColor: MyColors.myLightGrey,
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.3,
         child: ListView.builder(
