@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'best_seller_books_section.dart';
+import 'newest_books_section.dart';
 import 'home_app_bar.dart';
 import 'featured_books_list_view.dart';
 
@@ -10,6 +10,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
@@ -18,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
               HomeAppBar(),
               FeaturedBooksListView(),
               SizedBox(height: 50),
-              BestSellerBooksSection()
+              NewestBooksSection()
             ],
           ),
         ),
