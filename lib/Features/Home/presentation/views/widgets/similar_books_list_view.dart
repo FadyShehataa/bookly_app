@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_book_image.dart';
@@ -14,7 +15,9 @@ class SimilarBooksListView extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (context, index) => const Padding(
           padding: EdgeInsets.only(right: 10),
-          child: CustomBookImage(),
+          child: CustomBookImage(
+            imageUrl: AssetsData.logo,
+          ),
         ),
       ),
     );
