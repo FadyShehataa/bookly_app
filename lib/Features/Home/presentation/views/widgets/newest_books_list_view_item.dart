@@ -21,7 +21,7 @@ class NewestBooksListViewItem extends StatelessWidget {
         child: Row(
           children: [
             CustomBookImage(
-                imageUrl: book.volumeInfo!.imageLinks?.thumbnail ?? ''),
+                imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? ''),
             const SizedBox(width: 30),
             Expanded(
               child: Column(
@@ -29,7 +29,7 @@ class NewestBooksListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    book.volumeInfo!.title!,
+                    book.volumeInfo?.title ?? '',
                     style: Styles.textStyle20.copyWith(
                       fontWeight: FontWeight.w400,
                       // fontFamily: kGTSectraFine
@@ -39,7 +39,7 @@ class NewestBooksListViewItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    book.volumeInfo!.authors![0],
+                    book.volumeInfo?.authors?[0] ?? '',
                     style: Styles.textStyle14.copyWith(
                       fontWeight: FontWeight.w500,
                       color: MyColors.myWhite.withOpacity(
@@ -55,8 +55,8 @@ class NewestBooksListViewItem extends StatelessWidget {
                       const Text('Free', style: Styles.textStyle20),
                       const Spacer(),
                       BookRating(
-                        averageRating: book.volumeInfo!.averageRating ?? 0,
-                        ratingsCount: book.volumeInfo!.ratingsCount ?? 0,
+                        averageRating: book.volumeInfo?.averageRating ?? 0,
+                        ratingsCount: book.volumeInfo?.ratingsCount ?? 0,
                       ),
                     ],
                   )
