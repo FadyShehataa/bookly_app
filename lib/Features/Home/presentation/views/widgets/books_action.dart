@@ -24,15 +24,9 @@ class BooksAction extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '19.99',
+                    'Free',
                     style: Styles.textStyle18.copyWith(
                       fontWeight: FontWeight.w700,
-                      color: MyColors.myBlack,
-                    ),
-                  ),
-                  Text(
-                    '€',
-                    style: Styles.textStyle15.copyWith(
                       color: MyColors.myBlack,
                     ),
                   ),
