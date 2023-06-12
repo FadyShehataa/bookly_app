@@ -1,6 +1,7 @@
-import 'package:bookly_app/Features/Search/presentation/views/widgets/custom_search_text_field.dart';
-import 'package:bookly_app/Features/Search/presentation/views/widgets/result_search_section.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_search_text_field.dart';
+import 'result_search_section.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});

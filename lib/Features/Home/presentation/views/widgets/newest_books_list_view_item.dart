@@ -1,6 +1,6 @@
-import 'package:bookly_app/Features/Home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/Features/Home/presentation/views/widgets/custom_book_image.dart';
-import 'package:bookly_app/core/utils/functions/navigate_to_book_details_view.dart';
+import '../../../../../core/models/book_model/book_model.dart';
+import 'custom_book_image.dart';
+import '../../../../../core/utils/functions/navigate_to_book_details_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/my_colors.dart';

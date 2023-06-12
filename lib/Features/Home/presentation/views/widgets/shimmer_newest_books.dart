@@ -1,7 +1,8 @@
-import 'package:bookly_app/core/utils/my_colors.dart';
-import 'package:bookly_app/core/widgets/shimmer_newest_books_list_view_item.dart';
+import '../../../../../core/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'shimmer_newest_books_list_view_item.dart';
 
 class ShimmerNewestBooks extends StatelessWidget {
   const ShimmerNewestBooks({super.key});
