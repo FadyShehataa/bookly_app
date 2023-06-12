@@ -2,7 +2,7 @@ import 'package:bookly_app/Features/Home/presentation/manager/featured_books_cub
 import 'package:bookly_app/core/widgets/custom_error_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/utils/navigate_to_book_details_view.dart';
+import '../../../../../core/utils/functions/navigate_to_book_details_view.dart';
 import '../../../../../core/widgets/shimmer_featured_books.dart';
 import 'custom_book_image.dart';
 
