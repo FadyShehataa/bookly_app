@@ -1,10 +1,10 @@
+import '../../../../../core/widgets/shimmer_newest_books.dart';
 import '../../manager/newest_books_cubit/newest_books_cubit.dart';
-import 'newest_books_list_view_item.dart';
+import '../../../../../core/widgets/books_list_view_item.dart';
 import '../../../../../core/widgets/custom_error_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'shimmer_newest_books.dart';
 
 class NewestBooksListView extends StatelessWidget {
   const NewestBooksListView({super.key});
@@ -24,7 +24,7 @@ class NewestBooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 20),
-                  child: NewestBooksListViewItem(book: state.books[index]),
+                  child: BooksListViewItem(book: state.books[index]),
                 );
               },
             ),
@@ -32,7 +32,7 @@ class NewestBooksListView extends StatelessWidget {
         } else if (state is NewestBooksFailure) {
           return CustomErrorWidget(errMessage: state.errMessage);
         }
-        return const ShimmerNewestBooks();
+        return const ShimmerBooks();
       },
     );
   }

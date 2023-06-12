@@ -1,8 +1,8 @@
 import '../../../../../core/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 
-class ShimmerNewestBooksListViewItem extends StatelessWidget {
-  const ShimmerNewestBooksListViewItem({super.key});
+class ShimmerBooksListViewItem extends StatelessWidget {
+  const ShimmerBooksListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {

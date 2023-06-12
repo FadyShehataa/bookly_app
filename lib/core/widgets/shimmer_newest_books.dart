@@ -4,8 +4,8 @@ import 'package:shimmer/shimmer.dart';
 
 import 'shimmer_newest_books_list_view_item.dart';
 
-class ShimmerNewestBooks extends StatelessWidget {
-  const ShimmerNewestBooks({super.key});
+class ShimmerBooks extends StatelessWidget {
+  const ShimmerBooks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class ShimmerNewestBooks extends StatelessWidget {
           padding: EdgeInsets.zero,
           itemCount: 5,
           itemBuilder: (context, index) {
-            return const ShimmerNewestBooksListViewItem();
+            return const ShimmerBooksListViewItem();
           },
         ),
       ),

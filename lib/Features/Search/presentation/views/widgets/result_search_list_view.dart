@@ -1,8 +1,8 @@
-import 'package:bookly_app/Features/Home/presentation/views/widgets/shimmer_newest_books.dart';
 import 'package:bookly_app/Features/Search/presentation/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../Home/presentation/views/widgets/newest_books_list_view_item.dart';
+import '../../../../../core/widgets/shimmer_newest_books.dart';
+import '../../../../../core/widgets/books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class ResultSearchListView extends StatelessWidget {
@@ -21,7 +21,7 @@ class ResultSearchListView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: NewestBooksListViewItem(
+                child: BooksListViewItem(
                   book: state.books[index],
                 ),
               );
@@ -30,7 +30,7 @@ class ResultSearchListView extends StatelessWidget {
         } else if (state is SearchBooksFailure) {
           return ErrorWidget(state.errMessage);
         } else if (state is SearchBooksLoading) {
-          return const ShimmerNewestBooks();
+          return const ShimmerBooks();
         }
         return Container();
       },

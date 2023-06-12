@@ -1,14 +1,14 @@
-import '../../../../../core/models/book_model/book_model.dart';
-import 'custom_book_image.dart';
-import '../../../../../core/utils/functions/navigate_to_book_details_view.dart';
+import '../models/book_model/book_model.dart';
+import '../../Features/Home/presentation/views/widgets/custom_book_image.dart';
+import '../utils/functions/navigate_to_book_details_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/my_colors.dart';
-import '../../../../../core/utils/styles.dart';
-import 'book_rating.dart';
+import '../utils/my_colors.dart';
+import '../utils/styles.dart';
+import '../../Features/Home/presentation/views/widgets/book_rating.dart';
 
-class NewestBooksListViewItem extends StatelessWidget {
-  const NewestBooksListViewItem({super.key, required this.book});
+class BooksListViewItem extends StatelessWidget {
+  const BooksListViewItem({super.key, required this.book});
   final BookModel book;
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,11 @@ class NewestBooksListViewItem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-            CustomBookImage(
-                imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? ''),
+            Hero(
+              tag: book.volumeInfo!.title!,
+              child: CustomBookImage(
+                  imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? ''),
+            ),
             const SizedBox(width: 30),
             Expanded(
               child: Column(
